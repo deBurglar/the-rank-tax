@@ -1,0 +1,29 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Large generated files
+data/expedia.db
+data/sample_expedia.csv
+r/model_input.csv
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# R temporary files
+.Rhistory
+.RData
+      

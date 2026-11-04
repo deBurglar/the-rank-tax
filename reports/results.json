@@ -1,0 +1,76 @@
+{
+ "top5_booking_share_random": 0.5408760833918951,
+ "top5_slot_share": 0.25,
+ "top5_booking_share_normal": 0.7233355850784358,
+ "position_share_of_top5_advantage": 0.6145240133249107,
+ "ctr_elasticity_random": -0.61080752838425,
+ "ctr_elasticity_normal": -1.098741525220878,
+ "ctr_pos1_vs_pos10_random": 3.1173377611733772,
+ "overall_ctr": 0.10604,
+ "overall_cvr": 0.035184,
+ "window": [
+  {
+   "bw_bucket": "0-1d",
+   "rank_elasticity": -0.375,
+   "ctr_top5": 0.212,
+   "ctr_16plus": 0.098,
+   "top5_premium": 2.153,
+   "n": 8260
+  },
+  {
+   "bw_bucket": "2-7d",
+   "rank_elasticity": -0.557,
+   "ctr_top5": 0.205,
+   "ctr_16plus": 0.068,
+   "top5_premium": 3.022,
+   "n": 21420
+  },
+  {
+   "bw_bucket": "8-30d",
+   "rank_elasticity": -0.68,
+   "ctr_top5": 0.187,
+   "ctr_16plus": 0.047,
+   "top5_premium": 3.99,
+   "n": 59140
+  },
+  {
+   "bw_bucket": "31-90d",
+   "rank_elasticity": -0.725,
+   "ctr_top5": 0.171,
+   "ctr_16plus": 0.038,
+   "top5_premium": 4.52,
+   "n": 51200
+  },
+  {
+   "bw_bucket": "90d+",
+   "rank_elasticity": -0.812,
+   "ctr_top5": 0.168,
+   "ctr_16plus": 0.03,
+   "top5_premium": 5.647,
+   "n": 11460
+  }
+ ],
+ "gbm_holdout_auc": 0.6826626914987691,
+ "validation_corr_gbm_vs_random_ctr": 0.7433371744439563,
+ "n_properties": 3000,
+ "n_gems": 68,
+ "gem_median_qarg": 26.43618574766355,
+ "gem_random_ctr_lift": 1.4161020455008666,
+ "revenue_sim_N5": {
+  "positions_moved_up": 5.0,
+  "bookings_gross": 508.113,
+  "bookings_net": 252.519,
+  "revenue_gross": 150844.681,
+  "revenue_net": 73079.382,
+  "net_pct_of_baseline_revenue": 1.448
+ },
+ "revenue_sim_N10": {
+  "positions_moved_up": 10.0,
+  "bookings_gross": 954.299,
+  "bookings_net": 455.869,
+  "revenue_gross": 290792.99,
+  "revenue_net": 135680.769,
+  "net_pct_of_baseline_revenue": 2.688
+ },
+ "baseline_revenue": 5047231.8100000005
+}
