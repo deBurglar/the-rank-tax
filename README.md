@@ -3,6 +3,47 @@
 > **Headline:** When hotels are shown in *random* order, the top 5 slots (25% of the page) still capture **54% of bookings**. Pure position  explains roughly **60% of the top-5 advantage** Expedia sees in normally ranked searches. Moving 68 "hidden gem" properties up 10 slots is worth about **+2.7% net booking revenue** — about half of what a naive estimate claims.
 
 > ⚠️ **Data note.** Figures above come from the included *synthetic* dataset (same schema as Kaggle's *Personalize Expedia Hotel Searches*, with known ground truth so the method can be validated). **Re-run on the real file for real numbers:** `./run_all.sh /path/to/train.csv`. Nothing else changes.
+>
+> ## Dashboard
+
+**Tableau dashboard:** [View The Rank Tax — Executive Dashboard](PASTE_YOUR_TABLEAU_PUBLIC_LINK_HERE)
+
+The dashboard explores:
+- Click-through rate decay by search position
+- Booking lead time and position sensitivity
+- Hidden-gem hotel candidates
+
+## Reproducing the analysis
+
+### Requirements
+- Python 3
+- SQLite
+- R and `ggplot2` for the optional R analysis
+- Bash to run `run_all.sh`
+
+### Run with synthetic data
+
+From the project root, generate the synthetic dataset, build the database, and run the analysis:
+
+```bash
+python python/01_generate_synthetic.py
+python python/02_load_db.py
+python python/03_analysis.py
+python run_sql.py
+```
+
+The scripts generate local data and analysis outputs. Large generated files and the local database are excluded from version control.
+
+**Important:** All reported findings in this repository are based on synthetic Expedia-style data. The revenue results are simulation outputs, not measured Expedia business outcomes.
+
+### Project structure
+
+- `python/` — data generation, database loading, and analysis
+- `sql/` — position-decay, booking-window, and hidden-gem queries
+- `r/` — logistic regression analysis
+- `tableau/` — dashboard build guide and supporting CSV files
+- `reports/` — executive summary, metrics, and charts
+- `outputs/sql/` — exported SQL analysis results
 
 ## Why this question
 The ICDM-2013 Expedia dataset has a `random_bool` flag: searches where hotels were shown in random order. That is a built-in randomised experiment. In random searches position is independent of quality, so the click/booking gap between slots is the **causal effect of position** (the "rank tax"). Normal searches mix position and quality; comparing the two separates them.
