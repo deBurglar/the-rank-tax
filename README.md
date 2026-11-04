@@ -6,7 +6,7 @@
 >
 > ## Dashboard
 
-**Tableau dashboard:** [View The Rank Tax — Executive Dashboard](PASTE_YOUR_TABLEAU_PUBLIC_LINK_HERE)
+**Tableau dashboard:** [View The Rank Tax — Executive Dashboard]((https://prod-in-a.online.tableau.com/#/site/shreyanshsakarwal512-0f28978c21/workbooks/1870740?:origin=card_share_link)E)
 
 The dashboard explores:
 - Click-through rate decay by search position
